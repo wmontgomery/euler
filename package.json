@@ -1,0 +1,14 @@
+{
+  "name": "euler",
+  "version": "1.0.0",
+  "description": "All my project Euler stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Montgomery",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
