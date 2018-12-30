@@ -27,10 +27,9 @@ const buildSequence = (fib, maxInSequence) => {
 
 const myFibs = buildSequence([1, 2], 4000000)
 
-const evenMahFibs = fib => 
+const evenMahFibs = fib =>
   fib.reduce((acc, currVal) => {
     return currVal % 2 === 0 ? acc + currVal : acc + 0
   }, 0)
 
-console.log(myFibs)
 console.log(evenMahFibs(myFibs))
