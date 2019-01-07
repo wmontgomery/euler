@@ -13,9 +13,8 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 const isPalindrome = (pal) => {
   const modifiedPalindrome = pal.toString().replace(/\W/g, '').toUpperCase()
   const strLen = modifiedPalindrome.length - 1
-  const lengthToCheck = Math.ceil(strLen / 2)
 
-  for (let i = 0; i < lengthToCheck; i++) {
+  for (let i = 0; i < Math.ceil(strLen / 2); i++) {
     if (modifiedPalindrome[i] !== modifiedPalindrome[strLen - i]) {
       return false
     }
@@ -25,21 +24,28 @@ const isPalindrome = (pal) => {
 
 const products = () => {
   let max = 999
-  const min = Math.floor(max / 2)
+  const min = 100
 
   // take the max, subtract by the index, check that.
   while (max >= min) {
     for (let i = 1; i < max; i++) {
       const productToPalindrome = max * (max - i)
 
+      // make sure this is never below the minimum to check, otherwise break out and get to the next bit
+      if (max - i === min) {
+        break
+      }
+
       if (isPalindrome(productToPalindrome)) {
         return `${max} * ${max - i} = ${productToPalindrome}`
       }
     }
+
+    // Well shucks. Didn't find anything yet
     max -= 1
   }
 
-  return 'hello'
+  return 'Sorry, there\'s nothing.'
 }
 
 console.log(products())
