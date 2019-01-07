@@ -25,27 +25,22 @@ const isPalindrome = (pal) => {
 const products = () => {
   let max = 999
   const min = 100
+  let daBiggest = 0
 
-  // take the max, subtract by the index, check that.
   while (max >= min) {
-    for (let i = 1; i < max; i++) {
-      const productToPalindrome = max * (max - i)
+    for (let i = max; i > min - 1; i--) {
+      const productToPalindrome = max * i
 
-      // make sure this is never below the minimum to check, otherwise break out and get to the next bit
-      if (max - i === min) {
-        break
-      }
-
-      if (isPalindrome(productToPalindrome)) {
-        return `${max} * ${max - i} = ${productToPalindrome}`
+      if (isPalindrome(productToPalindrome) && productToPalindrome > daBiggest) {
+        console.log(`${max} * ${i} = ${productToPalindrome}`)
+        daBiggest = productToPalindrome
       }
     }
 
     // Well shucks. Didn't find anything yet
     max -= 1
   }
-
-  return 'Sorry, there\'s nothing.'
+  return daBiggest
 }
 
 console.log(products())
