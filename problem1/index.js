@@ -10,11 +10,11 @@ const isMultipleOf = (myNumber) =>
 const getTheSum = (theIndex) => {
   let theSum = 0
 
-  for( let i = 0; i < theIndex; i++ ) {
+  for (let i = 0; i < theIndex; i++) {
     theSum += isMultipleOf(i)
   }
 
   return theSum
 }
 
-console.log( getTheSum(process.argv[2]))
+console.log(getTheSum(process.argv[2]))
