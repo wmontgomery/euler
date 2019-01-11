@@ -6,8 +6,7 @@ What is the 10 001st prime number?
 
 const { primeFactors } = require('../helpers/primeFactors.js')
 
-// loop odd numbers and keep a counter of how many are there 
-
+// loop odd numbers and keep a counter of how many are there
 
 const getNthPrime = (n) => {
   let counter = 1
@@ -16,7 +15,7 @@ const getNthPrime = (n) => {
   while (counter < n) {
     if (primeFactors(numToCheck).length === 1) {
       counter++
-    }  
+    }
 
     if (counter < n) {
       numToCheck += 2
