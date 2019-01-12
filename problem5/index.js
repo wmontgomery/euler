@@ -9,7 +9,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 // Loop through those sons of guns to see if the number is divisible
 // Smile
 const topNumber = 20
-const { buildCountArray } = require('../helpers/buildCountArr.js')
+const { buildCountArray } = require('../helpers/buildCountArr')
 
 const removeFactors = (arr, max) =>
   arr.reduce((acc, v) => {

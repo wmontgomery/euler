@@ -11,7 +11,7 @@ Find the difference between the sum of the squares of the first one hundred natu
  */
 
 const topNumber = 100
-const { buildCountArray } = require('../helpers/buildCountArr.js')
+const { buildCountArray } = require('../helpers/buildCountArr')
 const theArray = buildCountArray(topNumber)
 
 const sumIt = arr => arr.reduce((acc, val) => acc + val, 0)

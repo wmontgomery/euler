@@ -6,6 +6,6 @@ What is the largest prime factor of the number 600851475143 ?
 
  */
 
-const { primeFactors } = require('../helpers/primeFactors.js')
+const { primeFactors } = require('../helpers/primeFactors/')
 
 console.log(primeFactors(600851475143))
